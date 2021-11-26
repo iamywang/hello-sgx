@@ -1,0 +1,12 @@
+enclave {
+
+    trusted {
+        /* define ECALLs here. */
+        public void ecall_print(void);
+    };
+
+    untrusted {
+        /* define OCALLs here. */
+        void ocall_print([in, string]const char* str);
+    };
+};
